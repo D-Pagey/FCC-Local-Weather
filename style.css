@@ -3,8 +3,16 @@ body {
 }
 
 h1 {
-  margin-top: 5%;
+  margin-top: 2% !important;
   color: #f7faff !important;
+}
+
+#fcc {
+  margin-right: 20%;
+}
+
+#data {
+  margin-left: 5%;
 }
 
 p {
@@ -12,6 +20,24 @@ p {
   margin-top: 10px;
 }
 
-#current, #latitude, #longitude, #place {
+#current, #latitude, #longitude, #place, #temperature, #max, #min, #units {
   color: red;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.default {
+  background-color: yellow;
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 10px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
 }
