@@ -7,6 +7,10 @@ h1 {
   color: #f7faff !important;
 }
 
+img {
+  margin-top: 10%;
+}
+
 #fcc {
   margin-right: 20%;
 }
@@ -20,8 +24,8 @@ p {
   margin-top: 10px;
 }
 
-#current, #latitude, #longitude, #place, #temperature, #max, #min, #units {
-  color: red;
+#current, #place, #temperature, #max, #min, #units1, #units2, #units3 {
+  color: black;
 }
 
 .grey {
