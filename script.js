@@ -1,13 +1,3 @@
-/*
-- toggle between Farenheit + Celcius
-- if statements to determine what to display. maybe have 3 images then a switch function?
-- investigate Fetch API
-(https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- Create "theme" array of different options - desciptions
-map that to a colour
-- learn const vs var vs let
-*/
-
 // Get current location
 
 const getLocation = () => {
@@ -51,6 +41,10 @@ function showPosition(position) {
   const themeClass = theme[description];
   document.body.className = themeClass || 'default';
 
+document.getElementById("toggler").addEventListener("click", () => {
+  cToF(celsius, hi, lo)
+});
+
   function cToF(a, b, c) {
     temperature.innerHTML = (a * 1.8) + 32;
     units1.innerHTML = " F";
@@ -60,7 +54,14 @@ function showPosition(position) {
     units3.innerHTML = " F";
   }
 
-   // cToF(celsius, hi, lo);
+  function fToC(a, b, c) {
+    temperature.innerHTML = (a - 32) * 5/9;
+    units1.innerHTML = " &#176C";
+    max.innerHTML = (b - 32) * 5/9;
+    units2.innerHTML = " &#176C";
+    min.innerHTML = (c - 32) * 5/9;
+    units3.innerHTML = " &#176C";
+  }
 
 }
 
@@ -70,6 +71,10 @@ const theme = {
   'udefined': 'black',
   'broken clouds': 'black',
   'shower rain': 'grey',
-  'overcast clouds': 'black'
+  'overcast clouds': 'black',
+  'light rain': 'black',
+  'moderate rain': 'black',
+  'drizzle rain': 'black',
+  'mist':'black'
 }
 getLocation();
