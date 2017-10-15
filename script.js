@@ -1,12 +1,9 @@
-// Get current location
+/*
+1) Toggle button: check old commits, array of temps.
+2) Math round down temp
+*/
 
-const getLocation = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      h1.innerHTML = "Geolocation not supported";
-    }
-}
+// Constants
 
   const update = document.getElementById("current");
   const place = document.getElementById("place");
@@ -17,55 +14,52 @@ const getLocation = () => {
   const units2 = document.getElementById("units2");
   const units3 = document.getElementById("units3");
 
+// Get current location
+const getLocation = () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      h1.innerHTML = "Geolocation not supported";
+    }
+}
+
+// Callback function for API call
 function showPosition(position) {
+
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
-  const finalURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=b8a569af62cc3d2b113f0b42813c6929&units=metric";
+  const finalUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=b8a569af62cc3d2b113f0b42813c6929&units=metric";
 
-  const request = new XMLHttpRequest();
-  request.open('GET', finalURL);
-  request.responseType = 'json';
-  request.send();
-  request.onload = function() {
-  const weatherData = request.response;
-  console.log(weatherData);
-  update.innerHTML = " " + weatherData.weather[0].description;
-  place.innerHTML = "" + weatherData.name;
-  temperature.innerHTML = "" + weatherData.main.temp;
-  const celsius = weatherData.main.temp;
-  const hi = weatherData.main.temp_max;
-  const lo = weatherData.main.temp_min;
-  max.innerHTML = "" + weatherData.main.temp_max;
-  min.innerHTML = "" + weatherData.main.temp_min;
-  const description = weatherData.weather[0].description;
-  const themeClass = theme[description];
-  document.body.className = themeClass || 'default';
+// fetching the weather data
+fetch(finalUrl)
+  .then((resp) => resp.json())
+  .then(function(weatherData) {
 
-document.getElementById("toggler").addEventListener("click", () => {
-  cToF(celsius, hi, lo)
-});
+    // changing the HTML
+    update.innerHTML = " " + weatherData.weather[0].description;
+    place.innerHTML = "" + weatherData.name;
+    temperature.innerHTML = "" + weatherData.main.temp;
+    max.innerHTML = "" + weatherData.main.temp_max;
+    min.innerHTML = "" + weatherData.main.temp_min;
 
-  function cToF(a, b, c) {
-    temperature.innerHTML = (a * 1.8) + 32;
-    units1.innerHTML = " F";
-    max.innerHTML = (b * 1.8) + 32;
-    units2.innerHTML = " F";
-    min.innerHTML = (c * 1.8) + 32;
-    units3.innerHTML = " F";
-  }
+    const celsius = weatherData.main.temp;
+    const hi = weatherData.main.temp_max;
+    const lo = weatherData.main.temp_min;
+    const description = weatherData.weather[0].description;
+    const themeClass = theme[description];
 
-  function fToC(a, b, c) {
-    temperature.innerHTML = (a - 32) * 5/9;
-    units1.innerHTML = " &#176C";
-    max.innerHTML = (b - 32) * 5/9;
-    units2.innerHTML = " &#176C";
-    min.innerHTML = (c - 32) * 5/9;
-    units3.innerHTML = " &#176C";
-  }
+    document.body.className = themeClass || 'default';
 
-}
+  })
+  // unsuccessful fetch
+  .catch(function(error) {
+    console.log("Something went wrong");
+  })
 
-}
+};
+
+getLocation();
+
 const theme = {
   'clear sky': 'grey',
   'udefined': 'black',
@@ -75,6 +69,6 @@ const theme = {
   'light rain': 'black',
   'moderate rain': 'black',
   'drizzle rain': 'black',
-  'mist':'black'
+  'mist':'black',
+  'haze':'black'
 }
-getLocation();
