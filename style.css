@@ -23,7 +23,7 @@ p {
   margin-top: 10px;
 }
 
-#current, #place, #temperature, #max, #min, #units1, #units2, #units3 {
+#description, #place, #temperature, #max, #min, #units1, #units2, #units3 {
   color: black;
 }
 
