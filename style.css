@@ -1,13 +1,20 @@
 body {
-  background-color: #66a0ff !important;
+  background-color: #80bfff !important;
 }
 
 h1 {
   margin-top: 2% !important;
   color: #f7faff !important;
 }
+
 img {
   margin-top: 10%;
+}
+
+.bg-image-col2 {
+    background-position: center;
+    display: block;
+    background-size: cover;
 }
 
 #fcc {
@@ -23,18 +30,6 @@ p {
   margin-top: 10px;
 }
 
-#description, #place, #temperature, #max, #min, #units1, #units2, #units3 {
-  color: black;
-}
-
-.grey {
-  background-color: grey;
-}
-
-.default {
-  background-color: yellow;
-}
-
 .footer {
   text-align: center;
   margin-bottom: 10px;
@@ -43,4 +38,66 @@ p {
   bottom: 0px;
   height: 30px;
   width: 100%;
+}
+
+#description, #place, #temperature, #max, #min, #units1, #units2, #units3 {
+  color: black;
+}
+
+.cloudy {
+  background-color: grey !important;
+}
+
+.cloudy .bg-image-col2 {
+  background-image: url("https://image.ibb.co/n4b8J6/clouds.jpg");
+  height: 100%;
+}
+
+.rainy {
+  background-color: #c4ff89 !important;
+}
+
+.rainy .bg-image-col2 {
+  background-image: url("https://image.ibb.co/nK7hd6/rain.jpg");
+  height: 100%;
+}
+
+.sunny {
+  background-color: #ffc34c !important;
+}
+
+.sunny .bg-image-col2 {
+  background-image: url("https://image.ibb.co/dnCtkm/clear.jpg");
+  height: 100%;
+}
+
+.drizzly {
+  background-color: #ff6de9 !important;
+}
+
+.drizzly .bg-image-col2 {
+  background-image: url("https://image.ibb.co/gRdNd6/drizzle.jpg");
+  height: 100%
+}
+
+.stormy {
+  background-color: #6e7989 !important;
+}
+
+.stormy .bg-image-col2 {
+  background-image: url("https://image.ibb.co/nMRay6/thunderstorm.jpg");
+  height: 100%;
+}
+
+.snowy {
+  background-color: #cbdaef !important;
+}
+
+.snowy .bg-image-col2 {
+  background-image: url("https://image.ibb.co/ckmVWR/snow.jpg");
+  height: 100%;
+}
+
+.error {
+  background-color: yellow !important;
 }

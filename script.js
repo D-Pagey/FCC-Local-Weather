@@ -1,32 +1,22 @@
 /*
-1) Math round down temp
-2) Change image based off description
-3) Smaller functions
+Bonus To Do:
+- Smaller functions
+- Sort out styling
 */
 
-  // Constants
-  const explanationEl = document.getElementById("description");
-  const placeEl = document.getElementById("place");
-  const temperatureEl = document.getElementById("temperature");
-  const maxEl = document.getElementById("max");
-  const minEl = document.getElementById("min");
-  const units1 = document.getElementById("units1");
-  const units2 = document.getElementById("units2");
-  const units3 = document.getElementById("units3");
+// Constants
+const explanationEl = document.getElementById("description");
+const placeEl = document.getElementById("place");
+const temperatureEl = document.getElementById("temperature");
+const maxEl = document.getElementById("max");
+const minEl = document.getElementById("min");
+const units1 = document.getElementById("units1");
+const units2 = document.getElementById("units2");
+const units3 = document.getElementById("units3");
 
 // Switches state of button
-let state = 'c';
-
-function switchState() {
-  if (state === 'c') {
-    state = 'f';
-    console.log("State was c and is now " + state);
-    return state;
-  } else {
-    state = 'c';
-    console.log("State was f and is now " + state);
-    return state;
-  }
+function switchState(state) {
+  return (state === 'c' ? 'f':'c');
 }
 
 // Get current location
@@ -52,28 +42,29 @@ fetch(finalUrl)
   .then(function(weatherData) {
 
     // Values from API Call
-    const temp = weatherData.main.temp;
-    const max = weatherData.main.temp_max;
-    const min = weatherData.main.temp_min;
-    const description = weatherData.weather[0].description;
-    const themeClass = theme[description];
+    console.log(weatherData);
+    const temp = Math.floor(weatherData.main.temp);
+    const max = Math.floor(weatherData.main.temp_max);
+    const min = Math.floor(weatherData.main.temp_min);
+    const main = weatherData.weather[0].main;
+    const themeClass = theme[main];
+
+    document.body.className = themeClass || 'error';
 
     // Changing HTML
     placeEl.innerHTML = "" + weatherData.name;
-    explanationEl.innerHTML = " " + description;
+    explanationEl.innerHTML = " " + weatherData.weather[0].description;
     temperatureEl.innerHTML = "" + temp;
     maxEl.innerHTML = "" + max;
     minEl.innerHTML = "" + min;
 
-    document.body.className = themeClass || 'default';
-
     // Convert to Farenheit
     function celsiusConverter(a, b, c) {
-      temperatureEl.innerHTML = (a * 1.8) + 32;
+      temperatureEl.innerHTML = Math.floor((a * 1.8) + 32);
       units1.innerHTML = " F";
-      maxEl.innerHTML = (b * 1.8) +32;
+      maxEl.innerHTML = Math.floor((b * 1.8) +32);
       units2.innerHTML = " F";
-      minEl.innerHTML = (c * 1.8) + 32;
+      minEl.innerHTML = Math.floor((c * 1.8) + 32);
       units3.innerHTML = " F";
     }
 
@@ -87,8 +78,9 @@ fetch(finalUrl)
       units3.innerHTML = " &#176C";
     }
 
+    let state;
     function toggle() {
-      switchState();
+      state = switchState(state);
       console.log("Double checking state is now " + state);
       if (state === 'c') {
       celsiusConverter(temp, max, min);
@@ -111,16 +103,10 @@ getLocation();
 
 // theme classes
 const theme = {
-  'clear sky': 'grey',
-  'undefined': 'black',
-  'broken clouds': 'black',
-  'shower rain': 'grey',
-  'overcast clouds': 'black',
-  'light rain': 'black',
-  'moderate rain': 'black',
-  'drizzle rain': 'black',
-  'mist':'black',
-  'haze':'black',
-  'scattered clouds':'black',
-  'few clouds':'black'
+  'Clouds': 'cloudy',
+  'Rain': 'rainy',
+  'Clear': 'sunny',
+  'Drizzle': 'drizzly',
+  'Thunderstorm': 'stormy',
+  'Snow': 'snowy'
 }
