@@ -2,6 +2,8 @@
 Bonus To Do:
 - Smaller functions
 - Sort out styling
+  loop through forEach/map. HTMl elements in Array.
+  [...HTMLQUEryselector] --> spread operator
 */
 
 // Constants
@@ -30,7 +32,7 @@ const getLocation = () => {
 
 // Callback function for API call
 function showPosition(position) {
-
+  console.log(position);
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
   const finalUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=b8a569af62cc3d2b113f0b42813c6929&units=metric";
@@ -81,7 +83,6 @@ fetch(finalUrl)
     let state;
     function toggle() {
       state = switchState(state);
-      console.log("Double checking state is now " + state);
       if (state === 'c') {
       celsiusConverter(temp, max, min);
       } else {
@@ -108,5 +109,8 @@ const theme = {
   'Clear': 'sunny',
   'Drizzle': 'drizzly',
   'Thunderstorm': 'stormy',
-  'Snow': 'snowy'
+  'Snow': 'snowy',
+  'Mist':'drizzly',
+  'Fog':'snowy',
+  'Haze':'snowy'
 }
