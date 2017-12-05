@@ -20,20 +20,19 @@
 
     <main class="content-container">
       <!-- Weather Data -->
-      <ul id="data">
-        <li><span class="stat-name">Temperature: </span><span class="stat-value" id="temperature">on it's way</span><span id="units1"></span></li>
-        <li><span class="stat-name">Description: </span><span class="stat-value" id="description">incoming</span></li>
-        <li><span class="stat-name">Temp High: </span><span class="stat-value" id="max">also loading</span><span id="units2"></span></li>
-        <li><span class="stat-name">Temp Low: </span><span class="stat-value" id="min">on it's way</span><span id="units3"></span></li>
-      </ul>
-
+      <div class="data-column">
+        <ul class="data" id="data">
+          <li><span class="stat-name">Temperature: </span><span class="stat-value" id="temperature">on it's way...</span><span id="units1"></span></li>
+          <li><span class="stat-name">Description: </span><span class="stat-value" id="description">incoming...</span></li>
+          <li><span class="stat-name">Temp High: </span><span class="stat-value" id="max">also loading...</span><span id="units2"></span></li>
+          <li><span class="stat-name">Temp Low: </span><span class="stat-value" id="min">nearly there...</span><span id="units3"></span></li>
+        </ul>
+        <button class="button" type="button" id="toggler">Toggle #176C / F</button>
+      </div>
 
       <!-- Image -->
       <div class="weather-img"></div>
     </main>
-
-            <span class="button"><button type="button" id="toggler">Toggle #176C / F</button></span>
-
 
 
 
