@@ -1,7 +1,8 @@
-/*1) Look through CSS and reorganise
-2) Media Queries
-3) Different style sheeets for weather
-4) Bring in JS*/
+/*
+1) Media Queries
+2) Different style sheeets for weather
+3) Bring in JS
+*/
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -36,8 +37,14 @@
   width: 90%;
 }
 
+.list {
+  list-style-type: none;
+  display: flex;
+}
+
 .stat-name {
   width: 35%;
+  min-width: 100px;
   font-weight: 600;
   margin: 0.25em 0;
 }
@@ -45,11 +52,20 @@
 .stat-value {
   color: white;
   margin: 0.25em 0;
+  padding-left: 1em;
+  min-width: 100px;
+  flex-grow: 1;
 }
 
-li {
-  list-style-type: none;
-  display: flex;
+.button {
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 2px;
+  font-size: 1.1em;
+  background-color: transparent;
+  color: #343a40;
+  border: 1px solid #343a40;
+  text-decoration: none;
 }
 
 .weather-img {
@@ -65,17 +81,6 @@ li {
     order: -1;
 }
 
-.button {
-  padding: 0.5em;
-  margin-top: 1em;
-  border-radius: 2px;
-  font-size: 1.1em;
-  background-color: transparent;
-  color: #343a40;
-  border: 1px solid #343a40;
-  text-decoration: none;
-}
-
 .footer {
   text-align: center;
   margin-bottom: 10px;
@@ -89,6 +94,67 @@ li {
 .freecodecamp {
     text-decoration: none;
     color: black;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 550px) {
+
+  .title {
+    margin: 0.75em 0;
+    font-size: 2.6em;
+  }
+
+  .sub-title {
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+  }
+
+  .content-container {
+    width: 85%;
+    font-size: 1.25em;
+  }
+
+  .footer {
+    font-size: 1.25em;
+  }
+
+}
+
+@media only screen and (min-width: 551px) {
+
+  .default-style {
+    font-size: 14px;
+  }
+
+  .sub-title {
+    margin-top: 0.5em;
+    width: 65%;
+    max-width: 500px;
+  }
+
+  .content-container {
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 65%;
+    max-width: 500px;
+  }
+
+  .data-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .weather-img {
+    order: 2;
+    margin: 0;
+    max-width: 200px;
+  }
+
+  .button {
+    width: 125px;
+  }
+
 }
 
 /*
