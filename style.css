@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   background-color: #80bfff;
+  color: #343a40;
 }
 
 .default-style {
@@ -40,6 +41,16 @@ li {
   display: flex;
 }
 
+.button {
+  padding: 0.5em;
+  border-radius: 2px;
+  font-size: 1.1em;
+  background-color: transparent;
+  color: #343a40;
+  border: 1px solid #343a40;
+  text-decoration: none;
+}
+
 .stat-name {
   width: 35%;
   font-weight: 600;
@@ -71,6 +82,11 @@ li {
   width: 40%;
 }
 
+.freecodecamp {
+    text-decoration: none;
+    color: black;
+}
+
 .footer {
   text-align: center;
   margin-bottom: 10px;
@@ -81,6 +97,9 @@ li {
   width: 100%;
 }
 
+
+
+/*
 .cloudy {
   background-color: grey !important;
 }
@@ -137,4 +156,4 @@ li {
 
 .error {
   background-color: yellow !important;
-}
+}*/
