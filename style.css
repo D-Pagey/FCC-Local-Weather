@@ -1,9 +1,3 @@
-/*
-1) Media Queries
-2) Different style sheeets for weather
-3) Bring in JS
-*/
-
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -96,6 +90,37 @@
     color: black;
 }
 
+/* Alternate Style Sheets */
+
+.cloudy {
+  background-image: url("img/clouds.jpg");
+}
+
+.rainy {
+  background-image: url("img/rain.jpg");
+}
+
+.sunny {
+  background-image: url("img/clear.jpg");
+}
+
+.drizzly {
+  background-image: url("img/drizzle.jpg");
+}
+
+.stormy {
+  background-image: url("img/thunderstorm.jpg");
+}
+
+.snowy {
+  background-image: url("img/snow.jpg");
+}
+
+.error {
+  border: 2px solid red;
+}
+
+/* Media Queries: */
 @media only screen and (min-width: 321px) and (max-width: 550px) {
 
   .title {
@@ -156,62 +181,3 @@
   }
 
 }
-
-/*
-.cloudy {
-  background-color: grey !important;
-}
-
-.cloudy .bg-image-col2 {
-  background-image: url("https://image.ibb.co/n4b8J6/clouds.jpg");
-  height: 100%;
-}
-
-.rainy {
-  background-color: #c4ff89 !important;
-}
-
-.rainy .bg-image-col2 {
-  background-image: url("https://image.ibb.co/nK7hd6/rain.jpg");
-  height: 100%;
-}
-
-.sunny {
-  background-color: #ffc34c !important;
-}
-
-.sunny .bg-image-col2 {
-  background-image: url("https://image.ibb.co/dnCtkm/clear.jpg");
-  height: 100%;
-}
-
-.drizzly {
-  background-color: #ff6de9 !important;
-}
-
-.drizzly .bg-image-col2 {
-  background-image: url("https://image.ibb.co/gRdNd6/drizzle.jpg");
-  height: 100%
-}
-
-.stormy {
-  background-color: #6e7989 !important;
-}
-
-.stormy .bg-image-col2 {
-  background-image: url("https://image.ibb.co/nMRay6/thunderstorm.jpg");
-  height: 100%;
-}
-
-.snowy {
-  background-color: #cbdaef !important;
-}
-
-.snowy .bg-image-col2 {
-  background-image: url("https://image.ibb.co/ckmVWR/snow.jpg");
-  height: 100%;
-}
-
-.error {
-  background-color: yellow !important;
-}*/
