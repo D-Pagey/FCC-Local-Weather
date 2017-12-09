@@ -57,9 +57,9 @@ fetch(finalUrl)
     // Changing HTML
     placeEl.innerHTML = "" + weatherData.name;
     explanationEl.innerHTML = " " + weatherData.weather[0].description;
-    temperatureEl.innerHTML = "" + temp;
-    maxEl.innerHTML = "" + max;
-    minEl.innerHTML = "" + min;
+    temperatureEl.innerHTML = temp + " &#176C";
+    maxEl.innerHTML = max + " &#176C";
+    minEl.innerHTML = min + " &#176C";
 
     // Convert to Farenheit
     function celsiusConverter(a, b, c) {

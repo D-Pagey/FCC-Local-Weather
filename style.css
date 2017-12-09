@@ -46,9 +46,12 @@
 .stat-value {
   color: white;
   margin: 0.25em 0;
+}
+
+.units {
+  color: white;
+  margin: 0.25em 0;
   padding-left: 1em;
-  min-width: 100px;
-  flex-grow: 1;
 }
 
 .button {
