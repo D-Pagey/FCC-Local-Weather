@@ -1,16 +1,16 @@
 /* Variables */
 /* Mixins */
 * {
+  background-color: #80bfff;
+  color: #343a40;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #80bfff;
-  color: #343a40; }
+  padding: 0; }
 
 .default-style {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: 12px; }
   @media screen and (min-width: 551px) {
     .default-style {
@@ -19,10 +19,10 @@
 .title {
   font-size: 2.4em;
   font-weight: 300;
-  margin: 0.5em 0; }
+  margin: .5em 0; }
   @media screen and (min-width: 321px) and (max-width: 550px) {
     .title {
-      margin: 0.75em 0;
+      margin: .75em 0;
       font-size: 2.6em; } }
 
 .sub-title {
@@ -35,7 +35,7 @@
       font-size: 1.5em; } }
   @media screen and (min-width: 551px) {
     .sub-title {
-      margin-top: 0.5em;
+      margin-top: .5em;
       width: 65%;
       max-width: 500px; } }
 
@@ -62,48 +62,48 @@
     justify-content: space-between; } }
 
 .list {
-  list-style-type: none;
-  display: flex; }
+  display: flex;
+  list-style-type: none; }
 
 .stat-name {
-  width: 35%;
-  min-width: 100px;
   font-weight: 600;
-  margin: 0.25em 0; }
+  margin: .25em 0;
+  min-width: 100px;
+  width: 35%; }
 
 .stat-value {
   color: white;
-  margin: 0.25em 0; }
+  margin: .25em 0; }
 
 .units {
   color: white;
-  margin: 0.25em 0;
+  margin: .25em 0;
   padding-left: 1em; }
 
 .button {
-  padding: 0.5em;
-  margin-top: 1em;
-  border-radius: 2px;
-  font-size: 1.1em;
   background-color: transparent;
-  color: #343a40;
   border: 1px solid #343a40;
+  border-radius: 2px;
+  color: #343a40;
+  font-size: 1.1em;
+  margin-top: 1em;
+  padding: .5em;
   text-decoration: none; }
   @media screen and (min-width: 551px) {
     .button {
       width: 125px; } }
 
 .weather-img {
-  background-position: center;
-  display: block;
-  background-size: cover;
-  background-image: url("img/default.jpg");
-  height: 175px;
-  width: 100%;
   align-self: center;
-  margin-bottom: 1em;
+  background-image: url("img/default.jpg");
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
-  order: -1; }
+  display: block;
+  height: 175px;
+  margin-bottom: 1em;
+  order: -1;
+  width: 100%; }
   @media screen and (min-width: 551px) {
     .weather-img {
       order: 2;
@@ -111,20 +111,20 @@
       max-width: 200px; } }
 
 .footer {
-  text-align: center;
+  bottom: 0;
+  height: 30px;
+  left: 0;
   margin-bottom: 10px;
   position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 30px;
+  text-align: center;
   width: 100%; }
   @media screen and (min-width: 321px) and (max-width: 550px) {
     .footer {
       font-size: 1.25em; } }
 
 .freecodecamp {
-  text-decoration: none;
-  color: black; }
+  color: white;
+  text-decoration: none; }
 
 /* Alternate Style Sheets */
 .cloudy {
