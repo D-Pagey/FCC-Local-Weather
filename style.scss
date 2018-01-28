@@ -1,0 +1,181 @@
+/* Variables */
+$mobile-lg: "(min-width: 321px) and (max-width: 550px)";
+$non-mobile: "(min-width: 551px)";
+
+/* Mixins */
+@mixin mediaQueries($arg) {
+  @media screen and #{$arg} {
+    @content;
+  }
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #80bfff;
+  color: #343a40;
+}
+
+.default-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  @include mediaQueries($non-mobile) {
+    font-size: 14px;
+  }
+}
+
+.title {
+  font-size: 2.4em;
+  font-weight: 300;
+  margin: 0.5em 0;
+  @include mediaQueries($mobile-lg) {
+    margin: 0.75em 0;
+    font-size: 2.6em;
+  }
+}
+
+.sub-title {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  text-decoration: underline;
+  @include mediaQueries($mobile-lg) {
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+  }
+  @include mediaQueries($non-mobile) {
+    margin-top: 0.5em;
+    width: 65%;
+    max-width: 500px;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  @include mediaQueries($mobile-lg) {
+    width: 85%;
+    font-size: 1.25em;
+  }
+  @include mediaQueries($non-mobile) {
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 65%;
+    max-width: 500px;
+  }
+}
+
+.data-column {
+  @include mediaQueries($non-mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+}
+
+.stat-name {
+  width: 35%;
+  min-width: 100px;
+  font-weight: 600;
+  margin: 0.25em 0;
+}
+
+.stat-value {
+  color: white;
+  margin: 0.25em 0;
+}
+
+.units {
+  color: white;
+  margin: 0.25em 0;
+  padding-left: 1em;
+}
+
+.button {
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 2px;
+  font-size: 1.1em;
+  background-color: transparent;
+  color: #343a40;
+  border: 1px solid #343a40;
+  text-decoration: none;
+  @include mediaQueries($non-mobile) {
+    width: 125px;
+  }
+}
+
+.weather-img {
+    background-position: center;
+    display: block;
+    background-size: cover;
+    background-image: url("img/default.jpg");
+    height: 175px;
+    width: 100%;
+    align-self: center;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    order: -1;
+    @include mediaQueries($non-mobile) {
+      order: 2;
+      margin: 0;
+      max-width: 200px;
+    }
+}
+
+.footer {
+  text-align: center;
+  margin-bottom: 10px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  @include mediaQueries($mobile-lg) {
+    font-size: 1.25em;
+  }
+}
+
+.freecodecamp {
+    text-decoration: none;
+    color: black;
+}
+
+/* Alternate Style Sheets */
+
+.cloudy {
+  background-image: url("img/clouds.jpg");
+}
+
+.rainy {
+  background-image: url("img/rain.jpg");
+}
+
+.sunny {
+  background-image: url("img/clear.jpg");
+}
+
+.drizzly {
+  background-image: url("img/drizzle.jpg");
+}
+
+.stormy {
+  background-image: url("img/thunderstorm.jpg");
+}
+
+.snowy {
+  background-image: url("img/snow.jpg");
+}
+
+.error {
+  border: 2px solid red;
+}
