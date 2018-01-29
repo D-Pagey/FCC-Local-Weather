@@ -10,7 +10,6 @@ $non-mobile: "(min-width: 551px)";
 }
 
 * {
-  background-color: #80bfff;
   color: #343a40;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -19,6 +18,7 @@ $non-mobile: "(min-width: 551px)";
 
 .default-style {
   align-items: center;
+  background-color: #80bfff;
   display: flex;
   flex-direction: column;
   font-size: 12px;
@@ -27,12 +27,85 @@ $non-mobile: "(min-width: 551px)";
   }
 }
 
+/* Modal */
+.modal-container {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.modal-btn {
+  background-color: transparent;
+  border: none;
+  margin: 5px 5px 0 0;
+  opacity: 0.85;
+}
+
+.material-icons.md-14 {
+  font-size: 20px;
+}
+
+.modal-about {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: .5em;
+  top: 100px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.modal-cancel {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.material-icons.sm-12 {
+  font-size: 20px;
+}
+
+.modal-title {
+  color: royalblue;
+  font-size: 1.2em;
+  padding: .5em;
+  text-decoration: underline;
+}
+
+.user-stories {
+  font-style: italic;
+  padding: .5em 2em .5em 2.5em;
+}
+
+.story:nth-of-type(2), .story:nth-of-type(3) {
+  margin-top: 1em;
+}
+
+.modal-text {
+  margin: .5em;
+}
+
+.copy {
+  font-size: 1.1em;
+}
+
+.link {
+  color: royalblue;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modal-about::backdrop {
+  background: darkgray;
+  opacity: .85;
+}
+
 .title {
   font-size: 2.4em;
   font-weight: 300;
   margin: .5em 0;
   @include mediaQueries($mobile-lg) {
-    margin: .75em 0;
+    margin: .5em 0;
     font-size: 2.6em;
   }
 }

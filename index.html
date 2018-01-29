@@ -9,10 +9,33 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   </head>
 
   <body class="default-style">
+
+    <!-- Modal -->
+    <div class="modal-container">
+      <button type="button" name="button" class="modal-btn">
+        <i class="material-icons md-14">info_outline</i></button>
+      <dialog class="modal-about">
+        <button type="button" name="button" class="modal-cancel">
+          <i class="material-icons sm-12">clear</i></button>
+        <h4 class="modal-title">Local Weather App</h4>
+        <p class="modal-text copy">This is an Intermediate Front End Developer project
+          from the FreeCodeCamp curriculum. The user stories to be completed are:</p>
+        <ul class="user-stories">
+          <li class="story copy">I can see the weather in my current location.</li>
+          <li class="story copy">I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.</li>
+          <li class="story copy">I can push a button to toggle between Fahrenheit and Celsius.</li>
+        </ul>
+        <p class="modal-text copy">This was made using: Flexbox, SCSS, and native JS.
+          No CSS or JavaScript frameworks or libraries were used.
+          The code can be seen on
+          <a href="https://github.com/D-Pagey/Weather" target="_blank" class="link">Github</a>.</p>
+      </dialog>
+    </div>
 
     <h1 class="title">Your Local Weather</h1>
 
@@ -42,9 +65,6 @@
 
   </body>
 
-  <!-- TO DO:
-  1) Convert to SCSS
-  2) Mobile-first
-  3) Add Modal
+  <!-- TO DO:Add Modal -->
 
 </html>
