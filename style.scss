@@ -39,6 +39,12 @@ $non-mobile: "(min-width: 551px)";
   border: none;
   margin: 5px 5px 0 0;
   opacity: 0.85;
+  @include mediaQueries($mobile-lg) {
+    margin: 10px 10px 0 0;
+  }
+  @include mediaQueries($non-mobile) {
+    margin: 15px 15px 0 0;
+  }
 }
 
 .material-icons.md-14 {
@@ -100,6 +106,7 @@ $non-mobile: "(min-width: 551px)";
   opacity: .85;
 }
 
+/* Main Content */
 .title {
   font-size: 2.4em;
   font-weight: 300;

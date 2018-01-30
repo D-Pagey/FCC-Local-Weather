@@ -7,6 +7,6 @@
 
 I learnt a lot about working with APIs in native JavaScript on this project. At first I called the API using an XML HTTP Request and then I used the Fetch API. I also created separate CSS classes for each type of weather.
 
-First time round I styled the project using Bootstrap, however I have since rewritten the CSS using FlexBox and making it mobile responsive.
+First time round I styled the project using Bootstrap, however I have since rewritten the CSS using FlexBox and redesigned it mobile-first. I've also replaced the CSS with SCSS for the media queries. 
 
 You can see this [Local Weather App](https://codepen.io/Pagey/pen/GMgrwM) project on CodePen.

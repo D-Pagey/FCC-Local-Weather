@@ -1,7 +1,6 @@
 /*
 Bonus To Do:
 - Smaller functions
-- Optimise styling
   loop through forEach/map. HTMl elements in Array.
   [...HTMLQUEryselector] --> spread operator
 */
