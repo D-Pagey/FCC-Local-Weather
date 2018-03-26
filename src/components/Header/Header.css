@@ -1,0 +1,10 @@
+.title {
+  font-size: 1.85rem;
+  font-weight: 300;
+  margin: 1.2rem 0;
+}
+
+.sub-title {
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
