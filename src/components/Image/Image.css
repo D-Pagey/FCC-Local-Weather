@@ -1,8 +1,8 @@
 .img-container {
-  width: 90%;
-}
-
-.img {
+  background-image: url(./default.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
-  width: 100%;
+  width: 87.5%;
+  height: 200px;
 }

@@ -1,0 +1,13 @@
+.footer {
+  bottom: 0;
+  height: 40px;
+  left: 0;
+  margin-bottom: 10px;
+  position: fixed;
+  width: 100%;
+}
+
+.freecodecamp {
+  color: white;
+  text-decoration: none;
+}
