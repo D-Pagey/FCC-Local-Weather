@@ -15,8 +15,25 @@ class App extends Component {
       max: '',
       min: '',
       description: '',
+      units: 'c',
       isLoading: false
     }
+  }
+
+  showPosition(position) {
+    console.log(position);
+  }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(this.showPosition);
+      } else {
+        console.log("Geolocation not supported");
+      }
+  }
+
+  componentDidMount() {
+    this.getLocation();
   }
 
   render() {
