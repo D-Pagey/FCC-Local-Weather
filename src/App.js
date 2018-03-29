@@ -7,6 +7,18 @@ import Data from './components/Data';
 import Footer from './components/Footer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      temp: '',
+      max: '',
+      min: '',
+      description: '',
+      isLoading: false
+    }
+  }
+
   render() {
     return (
       <div className="app">
