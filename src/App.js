@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Image from './components/Image';
 import Data from './components/Data';
 import Footer from './components/Footer';
+import { getPosition } from './utilities/Location.js';
 
 class App extends Component {
   constructor(props) {
@@ -20,20 +21,8 @@ class App extends Component {
     }
   }
 
-  showPosition(position) {
-    console.log(position);
-  }
-
-  getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(this.showPosition);
-      } else {
-        console.log("Geolocation not supported");
-      }
-  }
-
   componentDidMount() {
-    this.getLocation();
+    getPosition();
   }
 
   render() {
