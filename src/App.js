@@ -5,7 +5,9 @@ import Header from './components/Header';
 import Image from './components/Image';
 import Data from './components/Data';
 import Footer from './components/Footer';
-import { getPosition } from './utilities/Location.js';
+import { getWeather } from './utilities/Location.js';
+
+getWeather();
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getPosition();
+
   }
 
   render() {
