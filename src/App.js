@@ -19,9 +19,11 @@ class App extends Component {
       min: 'loading',
       description: 'loading',
       place: 'loading',
-      units: 'c',
+      units: 'C',
       isLoading: true
     }
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +48,23 @@ class App extends Component {
       })
   }
 
+  handleClick() {
+    (this.state.units === 'C' ?
+    this.setState(prevState => ({
+      units: 'F',
+      temp: (prevState.temp * 1.8) + 32,
+      max: (prevState.max * 1.8) + 32,
+      min: (prevState.min * 1.8) + 32
+    })) :
+    this.setState(prevState => ({
+      units: 'C',
+      temp: Math.round(((prevState.temp - 32) / 1.8) * 100) / 100,
+      max: Math.round(((prevState.max - 32) / 1.8) * 100) / 100,
+      min: Math.round(((prevState.min - 32) / 1.8) * 100) / 100
+    }))
+    );
+  }
+
   render() {
     return (
       <div className="app">
@@ -56,7 +75,9 @@ class App extends Component {
           temp={this.state.temp}
           max={this.state.max}
           min={this.state.min}
-          description={this.state.description} />
+          description={this.state.description}
+          handleClick={this.handleClick}
+          units={this.state.units} />
         <Footer />
       </div>
     );
