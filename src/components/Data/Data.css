@@ -1,8 +1,30 @@
 .data-container {
+  max-width: 320px;
   width: 87.5%;
 }
 
 .list {
   list-style-type: none;
   padding: 0;
+}
+
+.stat {
+  display: inline-block;
+  font-weight: 800;
+  min-width: 120px;
+}
+
+.value {
+  color: white;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #343a40;
+  border-radius: 5px;
+  color: #343a40;
+  font-size: 1.1rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  text-decoration: none;
 }

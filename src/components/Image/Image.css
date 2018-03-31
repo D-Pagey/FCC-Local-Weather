@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
   border-radius: 5px;
-  width: 87.5%;
-  height: 200px;
+  height: 180px;
+  max-width: 320px;
+  width: 85%;
 }

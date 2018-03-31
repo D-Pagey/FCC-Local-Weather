@@ -17,6 +17,7 @@ class App extends Component {
       max: 'loading',
       min: 'loading',
       description: 'loading',
+      place: 'loading',
       units: 'c',
       isLoading: true
     }
@@ -34,7 +35,8 @@ class App extends Component {
         temp: Math.floor(data.main.temp),
         max: Math.floor(data.main.temp_max),
         min: Math.floor(data.main.temp_min),
-        description: data.weather[0].main,
+        description: data.weather[0].description,
+        place: data.name,
         isLoading: false
       }))
 
@@ -46,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header />
+        <Header place={this.state.place} />
         <Image />
         <Data
           temp={this.state.temp}

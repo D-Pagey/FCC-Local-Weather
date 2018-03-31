@@ -2,11 +2,11 @@ import React from 'react';
 
 import './Header.css';
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <h1 className="title">Your Local Weather</h1>
-      <h3 className="sub-title">The weather in <span id="place">London</span></h3>
+      <h3 className="sub-title">The weather in {props.place}</h3>
     </header>
   )
 }
