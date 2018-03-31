@@ -15,6 +15,8 @@ rewritten the CSS using FlexBox and redesigned it mobile-first. I've also
 replaced the CSS with SCSS for the media queries.
 
 **Improvements:**
+- I've created a helper function but can't work out how to implement it. In the
+meantime I have used a set location.
 - Fix the ::backdrop CSS element on the Dialog element. It works in the vanilla
 JS version but not in the React version.
 

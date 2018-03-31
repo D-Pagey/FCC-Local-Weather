@@ -16,6 +16,7 @@ export function getWeather() {
       .then((resp) => resp.json())
       .then(function(data) {
         console.log(data)
+        return data;
       });
     }
 

@@ -7,10 +7,10 @@ class Data extends Component{
     return (
       <main className="data-container">
         <ul className="list">
-          <li>Temperature:</li>
-          <li>Description:</li>
-          <li>Temp High:</li>
-          <li>Temp Low:</li>
+          <li>Temperature: {this.props.temp}</li>
+          <li>Description: {this.props.description}</li>
+          <li>Temp High: {this.props.max}</li>
+          <li>Temp Low: {this.props.min}</li>
         </ul>
         <button>Toggle C/F</button>
       </main>
