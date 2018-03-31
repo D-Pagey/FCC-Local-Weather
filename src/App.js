@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import Modal from './components/Modal';
 import Header from './components/Header';
 import Image from './components/Image';
 import Data from './components/Data';
@@ -48,6 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <Modal />
         <Header place={this.state.place} />
         <Image />
         <Data
