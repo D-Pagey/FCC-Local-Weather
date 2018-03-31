@@ -1,5 +1,5 @@
 .img-container {
-  background-image: url(./default.jpg);
+  background-image: url(../../utilities/default.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -7,3 +7,23 @@
   max-width: 320px;
   width: 85%;
 }
+
+.Clouds {
+  background-image: url("../../utilities/clouds.jpg"); }
+
+.Rain {
+  background-image: url("../../utilities/rain.jpg"); }
+
+.Clear {
+  background-image: url("../../utilities/clear.jpg"); }
+
+.Drizzle {
+  background-image: url("../../utilities/drizzle.jpg"); }
+
+.Thunderstorm {
+  background-image: url("../../utilities/thunderstorm.jpg"); }
+
+.Snow,
+.Fog,
+.Haze {
+  background-image: url("../../utilities/snow.jpg"); }
