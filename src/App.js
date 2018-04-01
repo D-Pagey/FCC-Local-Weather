@@ -10,8 +10,6 @@ import getUrl from './utilities/Location.js';
 
 const claphamUrl = "https://api.openweathermap.org/data/2.5/weather?lat=51.44137&lon=-0.15234190000000003&appid=b8a569af62cc3d2b113f0b42813c6929&units=metric";
 
-console.log(getUrl());
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +34,8 @@ class App extends Component {
   }
 
   fetchData() {
-    fetch(claphamUrl)
+    getUrl().then(url => {
+      fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         temp: Math.floor(data.main.temp),
@@ -51,6 +50,7 @@ class App extends Component {
       .catch(function(error) {
         console.log("Something went wrong");
       })
+    });
   }
 
   handleClick() {
