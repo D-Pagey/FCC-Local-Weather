@@ -8,11 +8,9 @@
 
 The most recent version of this project was written in React using
 Create-React-App. It was really interesting to see how to manage the various
-states of components in React versus how I handled it in the native version. 
+states of components in React versus how I handled it in the native version.
 
 **Improvements:**
-- I've created a helper function but can't work out how to implement it. In the
-meantime I have used a set location.
 - Fix the ::backdrop CSS element on the Dialog element. It works in the vanilla
 JS version but not in the React version.
 

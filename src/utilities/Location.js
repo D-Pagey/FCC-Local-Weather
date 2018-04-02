@@ -1,5 +1,5 @@
 export default async function getUrl() {
-  const url = await getLocation().then(constructUrl).catch(alert);
+  return getLocation().then(constructUrl).catch(alert);
 }
 
 function getLocation() {

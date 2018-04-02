@@ -8,8 +8,6 @@ import Data from './components/Data';
 import Footer from './components/Footer';
 import getUrl from './utilities/Location.js';
 
-const claphamUrl = "https://api.openweathermap.org/data/2.5/weather?lat=51.44137&lon=-0.15234190000000003&appid=b8a569af62cc3d2b113f0b42813c6929&units=metric";
-
 class App extends Component {
   constructor(props) {
     super(props);
