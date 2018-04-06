@@ -11,6 +11,7 @@ Create-React-App. It was really interesting to see how to manage the various
 states of components in React versus how I handled it in the native version.
 
 **Improvements:**
+- Changed units to show degrees symbol.
 - Fix the ::backdrop CSS element on the Dialog element. It works in the vanilla
 JS version but not in the React version.
 
