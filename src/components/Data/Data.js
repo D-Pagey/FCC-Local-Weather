@@ -2,10 +2,7 @@ import React from 'react';
 
 import './Data.css';
 
-function Data(props) {
-
-  const { temp, description, max, min, handleClick, units } = props;
-
+function Data({ temp, description, max, min, handleClick, units }) {
   return (
     <main className="data-container">
       <ul className="list">

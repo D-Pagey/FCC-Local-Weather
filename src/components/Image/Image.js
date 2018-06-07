@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Image.css';
 
-function Image(props) {
+function Image({ main }) {
   return (
-    <div className={'img-container ' + props.main}></div>
+    <div className={'img-container ' + main}></div>
   )
 }
 
