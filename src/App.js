@@ -42,10 +42,10 @@ class App extends Component {
     });
   }
 
-  handleClick() {
+  handleClick = () => {
     const { units } = this.state;
 
-    units === 'C'
+    return units === 'C'
       ? this.setState(prevState => ({
         units: 'F',
         temp: (prevState.temp * 1.8) + 32,
